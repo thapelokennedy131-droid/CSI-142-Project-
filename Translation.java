@@ -9,8 +9,8 @@ this.amount = amount;
 this.description = description;        
 this.date = LocalDateTime.now();    
 }    
-public double getAmount() { 
-return amount; }   
+public double getAmount() 
+{ return amount; }   
 public LocalDateTime getDate() 
 { return date; }    
 public String getDescription() 
