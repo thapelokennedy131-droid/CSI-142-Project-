@@ -1,0 +1,53 @@
+Motshelo System – Group Contribution Log
+
+ 
+Course: CSI142  |  Project: Motshelo Savings Group Management System
+ 
+Member Contributions
+#
+
+Member Name
+
+Student ID
+
+Contributions / Tasks
+
+1
+
+Thuto Dikampa
+
+202504450
+
+Class diagram design, Members.java, Contribution.java, system testing
+
+2
+
+Osiame Robert
+
+202502301
+
+MotsheloManager.java (core logic), getTotalSavings(), getMemberBalance()
+
+3
+
+Kennedy Thapelo
+
+202501315
+
+MainApp.java (menu & input handling), sample run transcript, documentation
+
+4
+
+Junior Moedingmang
+
+202501419
+
+Transaction.java, Withdrawal.java, OOP mapping file, report compilation
+
+5
+
+Boemo Olopeng
+
+202404392
+
+Testing & debugging, contribution log, README, version control management
