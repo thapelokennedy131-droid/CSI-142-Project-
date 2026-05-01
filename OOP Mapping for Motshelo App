@@ -1,0 +1,55 @@
+Motshelo System – OOP Mapping File
+
+Maps each OOP concept to the exact class and file in the actual source code.
+
+OOP Concept
+File / Class
+Specific Evidence
+
+Class
+All .java files
+Members.java (class Member), Transaction.java, Contribution.java, Withdrawal.java, MotsheloManager.java, MainApp.java — each defines a distinct class.
+
+Abstract Class
+Transaction.java
+'public abstract class Transaction' — cannot be instantiated directly; forces subclasses (Contribution, Withdrawal) to inherit its fields.
+
+Inheritance
+Contribution.java, Withdrawal.java
+'public class Contribution extends Transaction' and 'public class Withdrawal extends Transaction' — both inherit amount, date, description and reuse the Transaction constructor via super().
+
+Constructor
+Transaction.java, Members.java, Contribution.java, Withdrawal.java
+Transaction(double amount, String description), Member(String name, String omang), Contribution(double amount) calls super(amount, "Contribution"), Withdrawal(double amount) calls super(-amount, "Withdrawal").
+
+Encapsulation
+Members.java (class Member), Transaction.java
+All fields declared private. Public getters: getName(), getOmang(), getBalance(), getHistory(), getAmount(), getDate(), getDescription() expose data safely.
+
+Composition
+Members.java (class Member)
+'private ArrayList<Transaction> history' — Member owns its transaction list; the list does not exist independently of the Member object.
+
+Polymorphism
+Transaction.java, Contribution.java, Withdrawal.java
+toString() is overridden in Transaction and used polymorphically. Contribution and Withdrawal objects are stored as Transaction references in the history ArrayList.
+
+Method Overriding
+Transaction.java
+'@Override public String toString()' formats the transaction as a readable string; subclasses inherit this behaviour.
+
+ArrayList / Collections
+Members.java, MotsheloManager.java
+'private ArrayList<Transaction> history' in Member; 'private List<Members> members' in MotsheloManager. Both use Java Collections Framework.
+
+Static Method
+MainApp.java
+'private static void seedData(MotsheloManager manager)' is a static helper method called from main() without an object instance.
+
+Object Instantiation
+MainApp.java (seedData method)
+new MotsheloManager(), new Members("Thapelo Kennedy", "123456789"), new Contribution(500.00) — objects created and used at runtime.
+
+super() keyword
+Contribution.java, Withdrawal.java
+Contribution calls super(amount, "Contribution"); Withdrawal calls super(-amount, "Withdrawal") — passing arguments up to the parent constructor.
