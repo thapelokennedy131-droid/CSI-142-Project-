@@ -76,4 +76,4 @@ Key Relationships
 - Member composes a list of Transaction objects (Composition).
 - MotsheloManager aggregates a list of Members objects (Aggregation).
 - MainApp creates a MotsheloManager and drives the program (Dependency).
-Note: Members.java contains a class named 'Member' (not 'Members') — this should be reconciled during refactoring.
+
