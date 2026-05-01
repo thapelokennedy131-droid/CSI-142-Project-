@@ -1,9 +1,9 @@
-💰 Motshelo – Finance & Savings Management System
+# Motshelo – Finance & Savings Management System
 > CSI142 Group Project | University of Botswana
 
 ---
 
-## 👥 Group Members
+## Group Members
 
 | Name | Student ID |
 |------|------------|
@@ -15,12 +15,12 @@
 
 ---
 
-## 📌 Domain
+##  Domain
 **Finance and Savings System**
 
 ---
 
-## 📖 Concept Note
+##  Concept Note
 
 **Motshelo** is a traditional Botswana community savings system where a group of people pool money together on a regular basis. Each member contributes a fixed or agreed amount periodically, and the accumulated funds are distributed to members in rotation or used for group needs.
 
@@ -36,7 +36,7 @@ The system is designed around real-world financial accuracy and transparency —
 
 ---
 
-## 🗂️ Package Structure
+## Package Structure
 
 ```
 src/
@@ -56,7 +56,7 @@ src/
 
 ---
 
-## 🧱 OOP Principles Applied
+## OOP Principles Applied
 
 | Principle | Where Applied |
 |-----------|--------------|
@@ -71,7 +71,7 @@ src/
 
 ---
 
-## ⚙️ How to Run
+## How to Run
 
 **Requirements:** Java 11 or higher
 
@@ -91,7 +91,7 @@ java -cp out bw.ub.csi142.motshelo.main.MainApp
 
 ---
 
-## 🖥️ Sample Output
+## Sample Output
 
 ```
 === All Members ===
@@ -104,7 +104,7 @@ Name: Thuto Dikampa   | ID: 987654321
 
 ---
 
-## 🔗 Repository
+## Repository
 
 [https://github.com/thapelokennedy131-droid/CSI-142-Project-.git](https://github.com/thapelokennedy131-droid/CSI-142-Project-.git)
 
