@@ -1,0 +1,79 @@
+Motshelo System – UML Class Diagram
+
+Package: bw.ub.motshelo  |  Course: CSI142
+
+   <<abstract>>
+  +----------------------------+
+  |        Transaction         |
+  +----------------------------+
+  | - amount      : double     |
+  | - date        : LocalDateTime|
+  | - description : String     |
+  +----------------------------+
+  | + getAmount()  : double    |
+  | + getDate()    : LocalDateTime|
+  | + getDescription(): String |
+  | + toString()   : String    |
+  +----------------------------+
+         ^              ^
+         |              |
+  (extends)        (extends)
+         |              |
++------------------+  +------------------+
+|   Contribution   |  |    Withdrawal    |
++------------------+  +------------------+
+| (no extra fields)|  | (no extra fields)|
++------------------+  +------------------+
+| + Contribution   |  | + Withdrawal     |
+|   (amount:double)|  |   (amount:double)|
+| calls super with |  | calls super with |
+| +amount,         |  | -amount,         |
+| 'Contribution'   |  | 'Withdrawal'     |
++------------------+  +------------------+
+
++-----------------------------+
+|           Members           |   (file: Members.java, class: Member)
++-----------------------------+
+| - name    : String          |
+| - omang   : String          |
+| - balance : double          |
+| - history : ArrayList<Transaction>  |  <<Composition>>
++-----------------------------+
+| + Member(name, omang)       |
+| + addTransaction(t)         |
+| + getName()    : String     |
+| + getOmang()   : String     |
+| + getBalance() : double     |
+| + getHistory() : ArrayList  |
++-----------------------------+
+         ^
+         | (aggregates 0..*)
+         |
++-----------------------------+
+|      MotsheloManager        |
++-----------------------------+
+| - members : List<Members>   |
++-----------------------------+
+| + MotsheloManager()         |
+| + addMembers(member)        |
+| + printAllMembers()         |
+| + printMemberHistory(id)    |
++-----------------------------+
+         ^
+         | (uses / creates)
+         |
++-----------------------------+
+|          MainApp            |
++-----------------------------+
+| (no fields)                 |
++-----------------------------+
+| + main(args: String[])      |
+| - seedData(manager)  static |
++-----------------------------+
+
+Key Relationships
+- Transaction (abstract) is the parent of Contribution and Withdrawal (Inheritance).
+- Member composes a list of Transaction objects (Composition).
+- MotsheloManager aggregates a list of Members objects (Aggregation).
+- MainApp creates a MotsheloManager and drives the program (Dependency).
+Note: Members.java contains a class named 'Member' (not 'Members') — this should be reconciled during refactoring.
